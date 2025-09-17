@@ -31,8 +31,10 @@ steps:
         'northamerica-northeast2',
         '--platform',
         'managed',
-        '--allow-unauthenticated'
+        '--allow-unauthenticated',
+        '--port','80'
       ]
+      
 
 images:
   - 'northamerica-northeast2-docker.pkg.dev/myprotfolio-472419/portfoliorepo/frontend:$COMMIT_SHA'
