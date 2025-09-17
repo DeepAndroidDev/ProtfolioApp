@@ -1,0 +1,41 @@
+steps:
+  # Step 1: Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'northamerica-northeast2-docker.pkg.dev/myprotfolio-472419/portfoliorepo/frontend:$COMMIT_SHA',
+        '.'  # context is last
+      ]
+
+  # Step 2: Push the image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'northamerica-northeast2-docker.pkg.dev/myprotfolio-472419/portfoliorepo/frontend:$COMMIT_SHA'
+      ]
+
+  # Step 3: Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      [
+        'run',
+        'deploy',
+        'react-app',
+        '--image',
+        'northamerica-northeast2-docker.pkg.dev/myprotfolio-472419/portfoliorepo/frontend:$COMMIT_SHA',
+        '--region',
+        'northamerica-northeast2',
+        '--platform',
+        'managed',
+        '--allow-unauthenticated'
+      ]
+
+images:
+  - 'northamerica-northeast2-docker.pkg.dev/myprotfolio-472419/portfoliorepo/frontend:$COMMIT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY

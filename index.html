@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathida Duku Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bfa509b247.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Cloud Engineer</p>
+                <h1>Hi, I'm <span>Mathida</span> Duku</h1>
+            </div>
+        </div>
+    </div>
+<!--about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, my name is Mathida Duku, and I'm a Cloud Engineer with a passion for building and managing secure and scalable cloud infrastructure.</p><br>
+                    <p>I specialize in Linux and a variety of cloud infrastructure technologies, including AWS, Google Cloud, and Digital Ocean. I have experience in DevOps methodologies and practices such as CI/CD and automation with infrastructure as code (IaC) tools like Terraform and Ansible. I'm skilled in containerization technologies like Docker and Kubernetes. I'm also proficient in web development technologies like HTML and CSS.</p><br>
+                    <p>As a Cloud Engineer, I'm constantly learning and keeping up with the latest trends and advancements in cloud technology. My goal is to use my skills and experience to help businesses optimize their cloud infrastructure and achieve their goals.</p><br>
+                    <p>I'm a team player with strong communication skills and a passion for collaborating on complex projects. When I'm not working, I enjoy watching tv shows, reading, and listening to podcasts or music.</p><br> 
+                    <p>Thanks for visiting my portfolio site. If you have any questions or would like to learn more about my experience, please feel free to contact me.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Linux</span><br>- Bash scripting<br>- Networking<br>- Package Management<br>- File System Management</li>
+                            <li><span>Cloud Services</span><br>- Amazon Web Services (AWS)<br>- Google Cloud Services (GCP)<br>- Digital Ocean</li>
+                            <li><span>Infrastructure as Code</span><br>- Ansible<br>- Terraform</li>
+                            <li><span>Containerization</span><br>- Docker<br>- Kubernetes</li>
+                            <li><span>Version Control</span><br>- Git <br>- Github</li>
+                            <li><span>Web Development</span><br>- HTML <br>- CSS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Graduate Research Assistant</span><br>Delta State University (2022)</li>
+                            <li><span>Chemical Analyst</span><br>Jawura Environmental Services (2020)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Dipl. Cloud Engineering</span><br>Altschool Africa (2022 - 2023)</li>
+                            <li><span>M.Sc. Biochemistry</span><br>Delta State University (2021 - 2022)</li>
+                            <li><span>B.Sc. Biochemistry</span><br>Delta State University (2015 - 2019)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Dockerized Laravel Application</h2>
+                    <p>A Laravel app was developed and dockerized for easy deployment and scalability. A Dockerfile and Docker Compose file was created, including services for the app to run. Real-time logging was implemented using a mounted volume, and data persistence for MySQL was ensured by mounting a named directory. 
+
+                    </p>
+                    <a href="https://github.com/mathildaduku/docker-project-altschool" target="_blank">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>AWS Load-Balanced Infrastructure Deployment with Terraform</h2>
+                    <p>
+                        Terraform was used to deploy a load-balanced AWS infrastructure with 3 EC2 instances, set up a custom domain name, and installed Apache using Ansible to display a simple HTML page identifying all instances.
+                    </p>
+                    <a href="https://github.com/mathildaduku/altschool-terraform-project" target="_blank">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>AWS EC2 Instance Deployment and Load Balancing</h2>
+                    <p>
+                        Deployed 2 Nginx web servers on AWS EC2 instances using Ansible and configured an Application Load Balancer (ALB) to route requests. Created a private network for the servers and ensured secure access through the load balancer.   
+                    </p>
+                    <a href="https://medium.com/@mathildaduku/how-to-deploy-an-nginx-web-server-on-ec2-instances-without-public-access-using-ansible-and-an-84f719ce2021"  target="_blank">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Automated Deployment of Laravel Application using Ansible and Bash Scripting</h2>
+                    <p>Deployed a Laravel application using Ansible automation tools to automate the deployment process. Hosted the application on virtual machines on DigitalOcean cloud provider, securing it with SSL encryption for security. Created a Bash script to set up and install PostgreSQL.</p>
+                    <a href="https://github.com/mathildaduku/altschool-cloud-exercises/tree/main/exam-project">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>AWS S3 Bucket and CloudFront Deployment</h2>
+                    <p>
+                        This project involved creating an S3 bucket with static website hosting enabled and it was configured to ensure that the website could only be viewed privately using AWS CloudFront. 
+                    </p>
+                    <a href="#" target="_blank">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Phonie Web Application</h2>
+                    <p>
+                        Phonie is a user-friendly web application designed to help users identify their telecom carrier quickly and easily. With its validation, country code support, and auto-completion features, Phonie provides a seamless and accurate carrier identification experience.
+                    </p>
+                    <a href="#" target="_blank">Learn more</a>
+                </div>                
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Multi-Page Website Development</h2>
+                    <p>
+                        Designed and developed a personal website featuring an "About Me" section, contact form, and registration and login pages with basic HTML validation.Created a functional calculator using HTML and CSS. Utilized HTML tables, form elements, and CSS styling to create an intuitive user interface.
+                    </p>
+                    <a href="https://github.com/mathildaduku/simple-html-page" target="_blank">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- blog -->
+    <div id="blog">
+        <div class="container">
+            <h1 class="sub-title">My Blog</h1>
+            <div id="retainable-rss-embed"
+            data-rss="https://medium.com/feed/@mathildaduku"
+            data-maxcols="2" 
+            data-layout="slider" 
+            data-poststyle="external" 
+            data-readmore="Read More" 
+            data-buttonclass="btn btn-primary" 
+            data-offset="-100"></div>            
+        </div>
+    </div>
+<!--contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i> mathildaduku@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/mathildaduku/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/mathida-duku/"target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://medium.com/@mathildaduku/"target="_blank"><i class="fa-solid fa-rss"></i></a>
+                        <a href="https://twitter.com/mathilda_duku/" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>            
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Mathida Duku</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-xSdUkZkSjgf6LvdGoN_mYhXxK4Q3MF8yKdb0Dbq7kSxn9DfelO345qycY-XQTtX6dA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+</body>
+</html>
