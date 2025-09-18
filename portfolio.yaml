@@ -27,7 +27,7 @@ metadata:
   labels:
     app: portfolio
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: portfolio
   ports:
