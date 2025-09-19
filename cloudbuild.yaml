@@ -5,7 +5,7 @@ steps:
       [
         'build',
         '-t',
-        'northamerica-northeast2-docker.pkg.dev/myprotfolio-472419/portfoliorepo/frontend:$COMMIT_SHA',
+        'northamerica-northeast2-docker.pkg.dev/myprotfolio-472419/portfoliorepo/frontend:latest',
         '.'  # context is last
       ]
 
@@ -14,7 +14,7 @@ steps:
     args:
       [
         'push',
-        'northamerica-northeast2-docker.pkg.dev/myprotfolio-472419/portfoliorepo/frontend:$COMMIT_SHA'
+        'northamerica-northeast2-docker.pkg.dev/myprotfolio-472419/portfoliorepo/frontend:latest'
       ]
 
   # # Step 3: Deploy to Cloud Run
